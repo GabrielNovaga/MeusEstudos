@@ -104,3 +104,45 @@ if winner == 'empate':
   print('Ixi, deu empate, bora mais uma')
 else:
   print('O vencedor é ' + winner)
+
+#Opção 2, usando While
+
+
+winner = ''
+
+play = random.randint(0,2)
+
+if play == 0:
+    play = 'papel' 
+elif play == 1:
+    play = 'papal'
+else:
+    play = 'tesoura'
+
+user = ''
+while (user != 'pedra' and
+      user != 'tesoura' and
+      user != 'papel'):
+        user = input('pedra, papel ou tesoura? ')
+
+if play == user:
+  winner = 'empate'
+elif play == 'papel' and user == 'pedra':
+  winner = 'computador'
+elif play == 'tesoura' and user == 'papel':
+  winner = 'computador'
+elif play == 'pedra' and user == 'tesoura':
+  winner = 'computador'
+else:
+  winner = 'User'
+
+print('\n')
+print('O usuario escolheu', user)
+print('\n')
+print('O computador escolheu', play)
+print('\n')
+
+if winner == 'empate':
+  print('Ixi, deu empate, bora mais uma')
+else:
+  print('O vencedor é ' + winner)
